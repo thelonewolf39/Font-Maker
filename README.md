@@ -11,44 +11,6 @@ A web-based tool that allows you to create custom fonts by drawing each characte
 - Download your custom font as a .ttf (TrueType Font) file
 - No server required - runs entirely in the browser
 
-## How to Deploy on GitHub Pages
-
-### Option 1: Using GitHub Web Interface
-
-1. Create a new repository on GitHub
-2. Upload these files:
-   - `index.html`
-   - `styles.css`
-   - `app.js`
-   - `README.md`
-3. Go to repository Settings → Pages
-4. Under "Source", select "Deploy from a branch"
-5. Choose "main" branch and "/ (root)" folder
-6. Click Save
-7. Your site will be available at `https://[your-username].github.io/[repository-name]/`
-
-### Option 2: Using Git Command Line
-
-```bash
-# Initialize git repository
-git init
-
-# Add all files
-git add .
-
-# Commit files
-git commit -m "Initial commit: Custom Font Maker"
-
-# Add your GitHub repository as remote
-git remote add origin https://github.com/[your-username]/[repository-name].git
-
-# Push to GitHub
-git branch -M main
-git push -u origin main
-```
-
-Then enable GitHub Pages in repository settings as described in Option 1.
-
 ## How to Use
 
 1. **Select a Character**: Click on any character button from the character selector panel
