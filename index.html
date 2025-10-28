@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Font Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✍️ Custom Font Maker</h1>
+            <p class="disclaimer">
+                ⚠️ This tool works best with an iPad, tablet, or device with stylus support for precise drawing.
+            </p>
+        </header>
+
+        <main>
+            <div class="controls-section">
+                <div class="character-selector">
+                    <h3>Select Character:</h3>
+                    <div id="characterButtons" class="character-buttons"></div>
+                </div>
+
+                <div class="drawing-tools">
+                    <h3>Drawing Tools:</h3>
+                    <button id="penBtn" class="tool-btn active">✏️ Pen</button>
+                    <button id="eraserBtn" class="tool-btn">🧹 Eraser</button>
+                    <button id="clearBtn" class="tool-btn">🗑️ Clear</button>
+                    <label>
+                        Brush Size:
+                        <input type="range" id="brushSize" min="1" max="20" value="3">
+                        <span id="brushSizeValue">3</span>
+                    </label>
+                </div>
+
+                <div class="font-info">
+                    <h3>Font Information:</h3>
+                    <label>
+                        Font Name:
+                        <input type="text" id="fontName" value="MyCustomFont" placeholder="Enter font name">
+                    </label>
+                    <div class="progress">
+                        <span id="progressText">Characters drawn: 0/62</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="canvas-section">
+                <div class="canvas-container">
+                    <h2>Draw: <span id="currentChar">A</span></h2>
+                    <canvas id="drawingCanvas" width="400" height="400"></canvas>
+                    <div class="canvas-guidelines">
+                        <div class="guideline baseline"></div>
+                        <div class="guideline midline"></div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <h3>Preview Your Font:</h3>
+                    <div id="fontPreview" class="font-preview">
+                        <p>AaBbCc123</p>
+                    </div>
+                    <button id="downloadBtn" class="download-btn">⬇️ Download Font (.ttf)</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Draw each character and click "Download Font" when ready. Your custom font will be saved as a .ttf file.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
